@@ -734,7 +734,6 @@ function m_girar_vetor(){
     m_c_vetor.push(primeiro);        
     m_carrosel(2);
 }
-setInterval(m_girar_vetor, 3000);
 
 async function m_times(){
     let time = getTeams();
@@ -830,34 +829,6 @@ function m_excluir_time_tudo(){
 function getTeams() {
     return JSON.parse(localStorage.getItem('teams') || '[]');
 }
-m_jogo_poke();  
-m_carrosel(1);
-m_index_poke(m_calculo_pag());
-m_busca_id();
-
-document.addEventListener("mouseenter", (card) => {
-    let principal = document.querySelector(".m_c_3");
-    if (card.target.classList.contains("m_c_card") && !card.target.classList.contains("m_c_3")) {
-        card.target.style.transform = "scale(1.15)"
-        card.target.style.filter = "blur(0)"
-        card.target.style.zIndex = "996"
-        principal.style.transform = "scale(1.08)"
-        principal.style.filter = "blur(2px)"
-    }
-}, true);
-
-document.addEventListener("mouseleave", (card) => {
-    let principal = document.querySelector(".m_c_3");
-    if (card.target.classList.contains("m_c_card")) {
-        card.target.style.background = "";
-        card.target.style.transform = ""
-        card.target.style.filter = ""
-        card.target.style.zIndex = ""
-        principal.style.transform = ""
-        principal.style.filter = ""
-    }
-}, true);
-
 
 // -----login-----
 function m_login(){
@@ -934,23 +905,6 @@ function m_lupa(){
     m_enviar_dados(pesquisa);
 }
 
-// ---------------times------------------
-if (location.pathname === "/times.html") {
-    m_times();
-}
-document.addEventListener("mouseenter", (card) => {
-    if (card.target.classList.contains("m_t_card")) {
-        let lixo = card.target.querySelector(".m_t_card_lixo");
-        lixo.style.marginLeft = "-5rem";
-    }
-}, true);
-
-document.addEventListener("mouseleave", (card) => {
-    if (card.target.classList.contains("m_t_card")) {
-        let lixo = card.target.querySelector(".m_t_card_lixo");
-        lixo.style.marginLeft = "-20rem";
-    }
-}, true);
 
 // ---------------------------marcar pokemon dos times--------------------------
 
@@ -960,4 +914,56 @@ function m_t_marcados(){
     pokemons.forEach(p => {
         m_vetor_marcados.push(Number(p.value));
     });
+}
+
+// rodar funções]
+if (location.pathname.includes("times.html")) {
+    m_times();
+    document.addEventListener("mouseenter", (card) => {
+        if (card.target.classList.contains("m_t_card")) {
+            let lixo = card.target.querySelector(".m_t_card_lixo");
+            lixo.style.marginLeft = "-5rem";
+        }
+    }, true);
+
+    document.addEventListener("mouseleave", (card) => {
+        if (card.target.classList.contains("m_t_card")) {
+            let lixo = card.target.querySelector(".m_t_card_lixo");
+            lixo.style.marginLeft = "-20rem";
+        }
+    }, true);
+
+}
+if (location.pathname.includes("index.html")) {
+    m_index_poke(m_calculo_pag());
+    m_carrosel(1);
+    document.addEventListener("mouseenter", (card) => {
+        let principal = document.querySelector(".m_c_3");
+        if (card.target.classList.contains("m_c_card") && !card.target.classList.contains("m_c_3")) {
+            card.target.style.transform = "scale(1.15)"
+            card.target.style.filter = "blur(0)"
+            card.target.style.zIndex = "996"
+            principal.style.transform = "scale(1.08)"
+            principal.style.filter = "blur(2px)"
+        }
+    }, true);
+
+    document.addEventListener("mouseleave", (card) => {
+        let principal = document.querySelector(".m_c_3");
+        if (card.target.classList.contains("m_c_card")) {
+            card.target.style.background = "";
+            card.target.style.transform = ""
+            card.target.style.filter = ""
+            card.target.style.zIndex = ""
+            principal.style.transform = ""
+            principal.style.filter = ""
+        }
+    }, true);
+    setInterval(m_girar_vetor, 3000);
+}
+if (location.pathname.includes("pokemon.html")) {
+    m_busca_id();
+}
+if (location.pathname.includes("jogo.html")) {
+    m_jogo_poke();  
 }
