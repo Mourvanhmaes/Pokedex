@@ -1,0 +1,139 @@
+codigo pokemon original
+        <div class="m_poke_titulo">
+            <h2>Pokémon</h2>
+        </div>
+        <div class="m_poke_pricipal">
+            <img src="img/esquerda.svg" alt="seta esquerda" class="m_poke_setas">
+            <div class="m_poke_pokemon">
+                <img src="img/master_ball.svg" alt="master_ball" class="m_poke_master">
+                <div class="m_poke_pokemon_img">
+                    <span></span>
+                    <img src="img/charizard.svg" alt="charizard">
+                </div>
+                <div class="m_poke_dados">
+                    <div class="m_poke_nome">
+                        <h1>charizard</h1>
+                        <h2>#006</h2>
+                    </div>
+                    <div class="m_poke_tipo">
+                        <h4>fire</h4>
+                        <h4>flying</h4>
+                    </div>
+                    <p>Charizard, o Pokémon Chama, cospe fogo tão quente que pode derreter rochas.</p>
+                    <div class="m_poke_medidas">
+                        <h4 class="m_poke_medidas_wt"><span>WT   </span>90.5KG</h4>
+                        <h4 class="m_poke_medidas_ht"><span>HT</span>1.7m</h4>
+                    </div>
+                    <div class="m_poke_fraq">
+                        <h3>Franquezas</h3>
+                        <div class="m_poke_tipo">
+                            <h4>fire</h4>
+                            <h4>flying</h4>
+                            <h4>flying</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="m_poke_habilit">
+                    <h3>Habilidades</h3>
+                    <p>Blaze</p>
+                    <p>Solar-Power</p>
+                </div>
+                <div class="m_poke_estrelas">
+                    <img src="img/estrela_apagada.svg" alt="estrela_apagada">
+                </div>
+            </div>
+            <img src="img/direita.svg" alt="seta direita" class="m_poke_setas">
+        </div>
+        <div class="m_poke_extras">
+            <div class="m_poke_sequencia">
+                <div class="m_poke_seq_titulo">
+                    <h1>Sequencia</h1>
+                    <div>
+                        <img src="img/esquerda.svg" alt="esquerda">
+                        <img src="img/direita.svg" alt="direita">
+                    </div>
+                </div>
+                <div class="m_poke_cards">
+                    <div class="m_poke_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <h3>Charizard</h3>
+                        <h4>#006</h4>
+                    </div>
+                    <div class="m_poke_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <h3>Charizard</h3>
+                        <h4>#006</h4>
+                    </div>
+                    <div class="m_poke_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <h3>Charizard</h3>
+                        <h4>#006</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="m_poke_evo">
+                <div class="m_poke_evo_titulo">
+                    <h1>Evoluções Registradas</h1>
+                    <br>
+                    <p>Da sua forma inicial até seu auge, cada evolução conta uma nova história</p>
+                </div>
+                <div class="m_poke_evo_quadrado">
+                    <div class="m_poke_evo_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <div class="m_poke_evo_card_nome">
+                            <h5>charizard #006</h5>
+                             <div class="m_poke_tipo">
+                                <h4>fire</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="img/evolu.svg" alt="evolucao">
+                    <div class="m_poke_evo_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <div class="m_poke_evo_card_nome">
+                            <h5>charizard #006</h5>
+                            <div class="m_poke_tipo">
+                                <h4>fire</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="img/evolu.svg" alt="evolucao">
+                    <div class="m_poke_evo_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <div class="m_poke_evo_card_nome">
+                            <h5>charizard #006</h5>
+                             <div class="m_poke_tipo">
+                                <h4>fire</h4>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+codigo evolução com id
+    poke.innerHTML = `
+    <div class="m_poke_evo_titulo">
+        <h1>Evoluções Registradas</h1>
+        <br>
+        <p>Da sua forma inicial até seu auge, cada evolução conta uma nova história</p>
+    </div>
+    <div class="m_poke_evo_quadrado">
+        ${m_evo.map((evo, index) => `
+            <div class="m_poke_evo_card">
+                <img src="${evo.img}" alt="${evo.nome}">
+                <div class="m_poke_evo_card_nome">
+                    <h5>${evo.nome} #${String(evo.id).padStart(3,"0")}</h5>
+                    <div class="m_poke_tipo">
+                        ${evo.tipos.map(t => `<h4 class="m_${t}">${t}</h4>`).join("")}
+                    </div>
+                </div>
+            </div>
+            ${index < m_evo.length - 1 ? `<img src="img/evolu.svg" alt="evolucao">` : ""}
+        `).join("")}
+    </div>`;    

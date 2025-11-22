@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokeprimata</title>
+    <link rel="shortcut icon" href="img/logo_pokebola.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="m_header_home">
+            <a href="index.html">
+                <img src="img/logo_pokebola.svg" alt="logo">
+                <h1>POKEPRIMATA</h1>
+            </a>
+        </div>
+        <nav class="m_header_nav">
+            <a href="index.html" class="m_header_a">Inicio</a>
+            <a href="times.html" class="m_header_a">Times</a>
+            <a href="pokemon.html" class="m_header_a  m_header_marcado">Pokémon</a>
+            <a href="favorites.html" class="m_header_a">Favoritos</a>
+            <a href="jogo.html" class="m_header_a">Jogos</a>
+        </nav>
+        <div class="m_header_direito">
+            <div class="m_h_lupa">
+                <input type="text" placeholder="Buscar Pokémon por nome, numero...." id="m_pesquisa_lupa">
+                <button onclick="m_lupa()">Buscar</button>
+            </div>
+            <img src="img/lupa.svg" alt="lupa" class="m_header_lupa" onclick="m_lupa_header()">
+            <a href="login.html" class="m_header_botao_login">LOGIN</a>
+            <img src="img/menu.svg" alt="menu" class="m_header_menu" onclick="m_menu_lateral()">
+        </div>
+    </header>
+        <div class="m_menu_lateral">
+        <nav>
+            <div class="m_lat_nav">
+                <a href="index.html" class="m_lat_a">
+                    <img src="img/house.svg" alt="house">
+                    Inicio
+                </a>
+            </div>
+            <div class="m_lat_nav">
+                <a href="times.html" class="m_lat_a">
+                    <img src="img/sword.png" alt="espada">
+                    Times
+                </a>
+            </div>
+            <div class="m_lat_nav">
+                <a href="pokemon.html" class="m_lat_a">
+                    <img src="img/poke_icon.png" alt="pokebola">
+                    Pokémon
+                </a>
+            </div>
+            <div class="m_lat_nav">
+                <a href="favorites.html" class="m_lat_a">
+                    <img src="img/star.svg" alt="star">
+                    Favoritos
+                </a>
+            </div>
+            <div class="m_lat_nav">
+                <a href="jogo.html" class="m_lat_a">
+                    <img src="img/controller.svg" alt="controller">
+                    Jogos
+                </a>
+            </div>
+        </nav>
+        <br>
+        <img src="img/poke_primata.svg" alt="logo" class="m_menu_logo">
+        <h1>POKEPRIMATA</h1>
+    </div>
+    <main class="m_pag_poke">
+        <div class="m_barra_pesq">
+            <img src="img/lupa.svg" alt="lupa">
+            <input type="text" placeholder="Buscar Pokémon por nome, numero...." id="m_pesquisa">
+            <button onclick="m_pesquisa()">Buscar</button>
+        </div>z 
+        <div class="m_poke_titulo">
+            <h2>Pokémon</h2>
+        </div>
+        <div class="m_poke_pricipal">
+            <img src="img/caret-left.svg" alt="seta esquerda" class="m_poke_setas" onclick="m_poke_antes()">
+            <div class="m_poke_pokemon">
+                <img src="img/master_ball.svg" alt="master_ball" class="m_poke_master">
+                <div class="m_poke_pokemon_img">
+                    <span></span>
+                    <img src="img/charizard.svg" alt="charizard">
+                </div>
+                <div class="m_poke_dados">
+                    <div class="m_poke_nome">
+                        <h1>charizard</h1>
+                        <h2>#006</h2>
+                    </div>
+                    <div class="m_poke_tipo">
+                        <h4>fire</h4>
+                        <h4>flying</h4>
+                    </div>
+                    <p>Charizard, o Pokémon Chama, cospe fogo tão quente que pode derreter rochas.</p>
+                    <div class="m_poke_medidas">
+                        <h4 class="m_poke_medidas_wt"><span>WT   </span>90.5KG</h4>
+                        <h4 class="m_poke_medidas_ht"><span>HT</span>1.7m</h4>
+                    </div>
+                    <div class="m_poke_fraq">
+                        <h3>Franquezas</h3>
+                        <div class="m_poke_tipo">
+                            <h4>fire</h4>
+                            <h4>flying</h4>
+                            <h4>flying</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="m_poke_habilit">
+                    <h3>Habilidades</h3>
+                    <p>Blaze</p>
+                    <p>Solar-Power</p>
+                </div>
+                <div class="m_poke_estrelas">
+                    <img src="img/estrela_apagada.svg" alt="estrela_apagada">
+                </div>
+            </div>
+            <img src="img/caret-right.svg" alt="seta direita" class="m_poke_setas" onclick="m_poke_prox()">
+        </div>
+        <div class="m_poke_extras">
+            <div class="m_poke_sequencia">
+                <div class="m_poke_seq_titulo">
+                    <h1>Sequencia</h1>
+                    <div class="m_poke_extras_setas">
+                        <img src="img/caret-left.svg" alt="esquerda">
+                        <img src="img/caret-right.svg" alt="direita">
+                    </div>
+                </div>
+                <div class="m_poke_cards">
+                    <div class="m_poke_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <div class="m_poke_card_des">
+                            <h3>Charizard</h3>
+                            <h4>#006</h4>
+                        </div>
+                    </div>
+                    <div class="m_poke_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <div class="m_poke_card_des">
+                            <h3>Charizard</h3>
+                            <h4>#006</h4>
+                        </div>
+                    </div>
+                    <div class="m_poke_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <div class="m_poke_card_des">
+                            <h3>Charizard</h3>
+                            <h4>#006</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m_poke_evo">
+                <div class="m_poke_evo_titulo">
+                    <h1>Evoluções Registradas</h1>
+                    <br>
+                    <p>Da sua forma inicial até seu auge, cada evolução conta uma nova história</p>
+                </div>
+                <div class="m_poke_evo_quadrado">
+                    <div class="m_poke_evo_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <div class="m_poke_evo_card_nome">
+                            <h5>charizard #006</h5>
+                             <div class="m_poke_tipo">
+                                <h4>fire</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="img/evolu.svg" alt="evolucao">
+                    <div class="m_poke_evo_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <div class="m_poke_evo_card_nome">
+                            <h5>charizard #006</h5>
+                            <div class="m_poke_tipo">
+                                <h4>fire</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="img/evolu.svg" alt="evolucao">
+                    <div class="m_poke_evo_card">
+                        <img src="img/charizard.svg" alt="charizard">
+                        <div class="m_poke_evo_card_nome">
+                            <h5>charizard #006</h5>
+                             <div class="m_poke_tipo">
+                                <h4>fire</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="m_f_principal">
+            <div class="m_f_titulo">
+                <div class="m_f_logo">
+                    <img src="img/logo_pokebola.svg" alt="logo">
+                    <h2>POKEPRIMATA</h2>
+                </div>
+                <h3>Projeto Acadêmico</h3>
+                <div class="m_f_conts">
+                    <a href="https://web.whatsapp.com/" target="_blank"><img src="img/whatsapp.svg" alt="whatsapp"></a>
+                    <a href="https://mail.google.com/mail/u/0/" target="_blank"><img src="img/envelope.svg" alt="envelope"></a>
+                    <a href="https://github.com/Mourvanhmaes/PokePrimata" target="_blank"><img src="img/github.svg" alt="github"></a>
+                </div>
+            </div>
+            <div class="m_f_nav">
+                <div class="m_f_nav_t">
+                    <p>Navegação</p>
+                    <a href="index.html">Inicio</a>
+                    <a href="pokemon.html">Pokémon</a>
+                    <a href="times.html">Times</a>
+                    <a href="jogo.html">Jogos</a>
+                    <a href="favorites.html">Favoritos</a>
+                </div>
+            </div>
+            <div class="m_f_nav">
+                <div class="m_f_nav_t">
+                    <p>Suporte</p>
+                    <a href="mailto:mourvanhmaes@gmail.com">Contato</a>
+                    <a href="mailto:mourvanhmaes@gmail.com">E-mail</a>
+                </div>
+            </div>
+            <div class="m_f_nav">
+                <div class="m_f_nav_t">
+                    <p>FAQ</p>
+                    <a href="mailto:mourvanhmaes@gmail.com?subject=Encontrei%20um%20bug%20no%20site">Reportar Bug</a>
+                    <a href="https://www.google.com/search?q=politicas+do+site&sca_esv=c66570702dbaae6e&sxsrf=AE3TifMz6JIXSNWHFVbtZ0JCiXc-lOa-tw%3A1761413492178&ei=dAn9aMrSCsDa5OUP97XzgAc&ved=0ahUKEwjK3IPM8L-QAxVALbkGHffaHHAQ4dUDCBA&uact=5&oq=politicas+do+site&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXBvbGl0aWNhcyBkbyBzaXRlMgQQABgeMgYQABgFGB4yCBAAGIAEGKIEMggQABiABBiiBDIFEAAY7wVI3w1QAFi0DHAAeAGQAQCYAZABoAGLCqoBBDAuMTC4AQPIAQD4AQGYAgigApsIwgIGEAAYBxgewgIIEAAYgAQYywHCAggQABgIGAcYHsICCBAAGAUYBxgewgIIEAAYBRgeGA3CAggQABgIGB4YDZgDAJIHAzAuOKAHoDqyBwMwLji4B5sIwgcDMC44yAcP&sclient=gws-wiz-serp" target="_blank">Politicas</a>
+                    <a href="https://www.google.com/search?q=privacidade+do+site&sca_esv=c66570702dbaae6e&sxsrf=AE3TifMkMXTY1okYdeE1NRkUaD5tIGR0bw%3A1761413421554&ei=LQn9aJLPIefR5OUP16e5yQU&ved=0ahUKEwjSma2q8L-QAxXnKLkGHddTLlkQ4dUDCBA&uact=5&oq=privacidade+do+site&gs_lp=Egxnd3Mtd2l6LXNlcnAiE3ByaXZhY2lkYWRlIGRvIHNpdGUyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yCBAAGIAEGKIEMgUQABjvBTIFEAAY7wUyCBAAGIAEGKIEMggQABiABBiiBEjwMVDXBliBMXADeAGQAQCYAaIBoAH0FKoBBDAuMjC4AQPIAQD4AQGYAhegAtAVqAIUwgIHECMY6gIYJ8ICDRAjGMkCGPAFGOoCGCfCAhAQABgDGI8BGOoCGLQC2AEBwgIQEC4YAxiPARjqAhi0AtgBAcICBBAjGCfCAgoQABiABBiKBRhDwgILEAAYgAQYsQMYgwHCAggQLhiABBixA8ICBBAAGAPCAggQABiABBixA8ICExAuGIAEGIoFGEMYsQMYxwEY0QPCAg4QLhiABBixAxjHARjRA8ICDhAAGIAEGIoFGLEDGIMBwgINEAAYgAQYigUYQxixA8ICDhAuGIAEGMcBGK8BGJgFwgIFEAAYgATCAgoQABiABBgKGLEDwgIHEAAYgAQYCsICBRAuGIAEwgIUEC4YgAQYlwUY3AQY3gQY4ATYAQGYAwm6BgYIARABGAqSBwQzLjIwoAeiiAGyBwQwLjIwuAe9FcIHBjAuMTcuNsgHQg&sclient=gws-wiz-serp" target="_blank">Privacidade</a>
+                    <a href="https://www.google.com/search?q=termos+do+site&sca_esv=c66570702dbaae6e&sxsrf=AE3TifNDrcMUNnCVH8zBjbgVqeFtAgg6yA%3A1761413461757&ei=VQn9aM2DLtON5OUP8dq8YA&ved=0ahUKEwiNgsO98L-QAxXTBrkGHXEtDwwQ4dUDCBA&uact=5&oq=termos+do+site&gs_lp=Egxnd3Mtd2l6LXNlcnAiDnRlcm1vcyBkbyBzaXRlMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIEEAAYHjIGEAAYCBgeMgYQABgIGB4yBhAAGAgYHjIIEAAYiQUYogRIhN4BUNDVAVj43AFwAXgBkAEAmAGcAaAB8AeqAQMwLje4AQPIAQD4AQGYAgWgAskEwgIKEAAYRxjWBBiwA8ICBxAAGIAEGA3CAggQABgIGAcYHsICCBAAGIAEGKIEmAMAiAYBkAYIkgcDMS40oAeuNLIHAzAuNLgHxgTCBwMwLjXIBws&sclient=gws-wiz-serp" target="_blank">Termos</a>
+                </div>
+            </div>
+        </div>
+        <div class="m_f_segundario">
+            <h5>© 2025 PokePrimata — Projeto acadêmico</h5>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
